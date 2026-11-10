@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | APERTURE</title>
+  <meta name="description" content="APERTURE is a creative storytelling platform for documentaries, photography, and filmmaking.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand aperture-brand" href="index.html"><img class="aperture-brand-logo" src="images/aperture-logo-white.png" alt="" aria-hidden="true"><span>APERTURE</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero-background" aria-hidden="true"></div>
+      <div class="container home-hero-content">
+        <div class="home-hero-copy">
+          <span class="label">Stories through a different lens.</span>
+          <h1 id="home-title">APERTURE</h1>
+          <div class="rule"></div>
+          <p class="text-white">We capture real moments, tell meaningful stories, and bring ideas to life through photography, documentaries, and cinematic video.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a class="btn btn-aperture" href="stories.html">EXPLORE STORIES</a>
+            <a class="btn btn-aperture-alt" href="about.html">GET TO KNOW US</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="home-editorial section" aria-label="A look behind the lens">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 col-md-6">
+            <figure class="home-editorial-portrait">
+              <img src="images/home-camera.jpg" alt="A portrait-oriented photograph of a cinema camera on set" loading="lazy">
+              <figcaption>BEHIND THE LENS <span aria-hidden="true">/</span> APERTURE</figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-6 offset-lg-1 col-md-6">
+            <span class="label">The art of storytelling</span>
+            <h2>EVERY FRAME<br>HAS A STORY.</h2>
+            <div class="rule"></div>
+            <p class="muted home-editorial-description">Through documentary film and photography, we explore real moments and the perspectives that make them meaningful.</p>
+            <a class="home-editorial-link" href="stories.html">DISCOVER OUR STORIES <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section band">
+      <div class="container">
+        <span class="label">Featured Documentaries</span>
+        <h2>Selected documentaries.</h2>
+        <p class="muted mt-3">Two original documentaries that tell real stories from our communities.</p>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <a class="card feature-card h-100 text-decoration-none" href="stories.html#tangab">
+              <div class="photo-frame feature-photo"><img class="card-img-top" src="images/tangab-still.jpg" alt="Title card of the documentary Tangab over a pile of red shrimp"></div>
+              <div class="card-body"><h3>Tangab</h3>
+                <p class="muted mb-0">TANGAB explores the lives of shrimp fishers in Pulupandan, Negros Occidental, showing their hard work, perseverance, and the local livelihood that sustains their families and community.</p>
+                <span class="link">VIEW STORY</span></div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card feature-card h-100 text-decoration-none" href="stories.html#carinderia">
+              <!-- Official Karinderya ng Sentro poster -->
+              <div class="photo-frame feature-photo"><img class="card-img-top" src="images/karinderya-ng-sentro-poster.jpg" alt="Official illustrated poster for Karinderya ng Sentro by ARTi Productions"></div>
+              <div class="card-body"><h3>Karinderya ng Sentro</h3>
+                <p class="muted mb-0">A Filipino student documentary about the everyday lives of karinderya workers beside the fast-paced commercial spaces in Alabang.</p>
+                <span class="link">VIEW STORY</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span id="year">2026</span> APERTURE. All rights reserved.</span>
+      <span><a href="index.html">Home</a> / <a href="stories.html">Stories</a> / <a href="about.html">About</a> / <a href="community.html">Community</a> / <a href="connect.html">Connect</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

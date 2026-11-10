@@ -1,0 +1,1 @@
+The About hero now uses a full-width, low-opacity background (images/about-street-musician.jpg). The provided website ZIP does not include a food photograph. To use your intended food photo, replace that file with your food photo, keeping the same filename, or update the background-image URL in css/style.css. The APERTURE logo is added to the navigation of all five pages.

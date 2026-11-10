@@ -1,0 +1,127 @@
+/* APERTURE – custom styles on top of Bootstrap 5. Colors are set once in :root. */
+:root{--bs-body-bg:#000;--bs-body-color:#D9D9D9;--bs-border-color:#333;--bs-body-font-family:'Inter',Arial,sans-serif;--bs-link-color:#fff;--bs-link-hover-color:#D9D9D9;--bg2:#171717;--hover:#292929;--muted:#A6A6A6}
+body{line-height:1.7}
+h1,h2,h3,h4,.label,.navbar-brand,.nav-link,.btn,.link{font-family:'Montserrat',Arial,sans-serif;text-transform:uppercase;color:#fff}
+h1{font-weight:400;letter-spacing:.28em;font-size:clamp(2.1rem,6vw,4.2rem)}
+h2{font-weight:400;letter-spacing:.16em;font-size:clamp(1.4rem,3.4vw,2.3rem)}
+h3{font-weight:500;letter-spacing:.14em;font-size:1rem}
+.label{display:block;font-size:.72rem;letter-spacing:.22em;color:var(--muted);margin-bottom:12px}
+.muted{color:var(--muted)}
+.rule{width:36px;height:1px;background:#fff;margin:22px 0}
+.section{padding:72px 0}
+.cover{width:100%;height:100%;object-fit:cover}
+:focus-visible{outline:2px solid #fff!important;outline-offset:3px}
+.navbar{background:#000;border-bottom:1px solid #333;padding:20px 0}
+.navbar-brand{font-weight:600;letter-spacing:.3em;font-size:1.1rem}
+.nav-link{font-size:.72rem;letter-spacing:.16em;color:#D9D9D9!important;border-bottom:1px solid transparent;padding:6px 0!important;margin-left:32px}
+.nav-link:hover{color:#fff!important}
+.nav-link.active{color:#fff!important;border-bottom-color:#fff}
+.navbar-toggler{border-color:#333}
+.navbar-toggler-icon{filter:invert(1)}
+@media(max-width:767px){.nav-link{margin-left:0;display:inline-block;margin-top:8px}}
+.btn{border-radius:0;font-size:.75rem;font-weight:600;letter-spacing:.16em;padding:15px 28px}
+.btn-aperture{background:#fff;color:#000;border:1px solid #fff}
+.btn-aperture:hover{background:#D9D9D9;border-color:#D9D9D9;color:#000}
+.btn-aperture-alt{background:var(--bg2);color:#fff;border:1px solid #333}
+.btn-aperture-alt:hover{background:var(--hover);border-color:var(--muted);color:#fff}
+.link{font-size:.72rem;font-weight:600;letter-spacing:.16em;border-bottom:1px solid #fff;display:inline-block;margin-top:12px}
+.band{background:var(--bg2);border-top:1px solid #333}
+.card{background:#000;border:1px solid #333;border-radius:0;color:#D9D9D9}
+a.card:hover{background:var(--hover);border-color:var(--muted)}
+.card-img-top{border-radius:0;aspect-ratio:16/9;object-fit:cover}
+.card-body{padding:24px}
+.story-row{border-top:1px solid #333;border-bottom:1px solid #333;padding:20px 0;display:block;text-decoration:none;color:#D9D9D9}
+.story-row:hover{background:var(--hover);color:#D9D9D9}
+.divider{border-top:1px solid #333}
+.about-item{border-top:1px solid #333;padding-top:28px}
+.circle{width:240px;height:240px;border-radius:50%;background:var(--bg2);border:1px solid #fff;margin:0 auto 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+svg.icon{width:44px;height:44px;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.action{display:flex;gap:20px;align-items:center;border:1px solid #333;padding:24px;margin-bottom:20px;text-decoration:none;color:#D9D9D9}
+.action{cursor:default}
+.action svg.icon{width:36px;height:36px;flex:none}
+.action h3{font-size:.85rem;margin-bottom:4px}
+footer{border-top:1px solid #333;padding:32px 0;font-size:.85rem;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:none}footer a:hover{color:#fff}
+figcaption{font-size:.78rem;color:var(--muted);padding-top:8px}
+
+
+/* APERTURE editorial photo treatment — simple, flat, and easy to customize */
+:root{--image-opacity:.76;--image-hover-opacity:.94}
+.photo-frame{position:relative;overflow:hidden;background:#171717;border:1px solid #292929;isolation:isolate}
+.photo-frame::after{content:"";position:absolute;inset:0;background:#000;opacity:.16;pointer-events:none;transition:opacity .3s ease}
+.photo-frame img{display:block;width:100%;height:100%;object-fit:cover;opacity:var(--image-opacity);transition:opacity .35s ease,transform .55s ease}
+.photo-frame:hover::after{opacity:.05}
+.photo-frame:hover img{opacity:var(--image-hover-opacity);transform:scale(1.025)}
+.hero-photo{height:440px}
+.hero-photo img{object-position:center}
+.wide-photo{height:330px}
+.feature-photo{height:240px}
+.feature-card{overflow:hidden;transition:border-color .25s ease,transform .25s ease}
+.feature-card:hover{transform:translateY(-3px);border-color:#777;background:#101010!important}
+.feature-card .photo-frame{border:0;border-bottom:1px solid #292929}
+.feature-card .photo-frame img{opacity:.82}
+.feature-card .card-body{background:#101010}
+.feature-card .link{transition:letter-spacing .25s ease}
+.feature-card:hover .link{letter-spacing:.2em}
+.editorial-figure{position:relative;margin:0}
+.editorial-figure::before{content:"";position:absolute;z-index:2;top:-12px;left:-12px;width:72px;height:72px;border-top:1px solid #888;border-left:1px solid #888;pointer-events:none}
+.editorial-figure::after{content:"";position:absolute;z-index:2;bottom:-12px;right:-12px;width:72px;height:72px;border-bottom:1px solid #888;border-right:1px solid #888;pointer-events:none}
+.story-banner{height:400px}
+.story-banner img{object-position:center}
+.story-poster{max-width:100%;border:1px solid #333;opacity:.92}
+.circle{background:#171717;border:1px solid #666;box-shadow:none}
+.circle{cursor:default}
+.community-photo{height:290px}
+.section .label{letter-spacing:.23em}
+@media(max-width:767px){.hero-photo{height:310px}.wide-photo,.story-banner{height:230px}.feature-photo{height:190px}.community-photo{height:210px}.editorial-figure::before,.editorial-figure::after{width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){.photo-frame img,.photo-frame::after,.feature-card{transition:none}.photo-frame:hover img,.feature-card:hover{transform:none}}
+
+/* ABOUT HERO: existing street-musician photo becomes a subtle, non-interactive backdrop. */
+.about-hero{position:relative;isolation:isolate;overflow:hidden;min-height:460px;display:flex;align-items:center;background:#000}
+.about-hero-background{position:absolute;inset:0;z-index:-1;background-image:url('../images/about-street-musician.jpg');background-repeat:no-repeat;background-size:cover;background-position:center 42%;opacity:.18;pointer-events:none}
+.about-hero-content{position:relative;z-index:1;padding-top:36px;padding-bottom:36px}
+.about-hero h1,.about-hero h3,.about-hero .label,.about-hero p{position:relative}
+.about-hero p{max-width:610px;line-height:1.85}
+@media(min-width:992px){.about-hero{min-height:540px}.about-hero-background{background-size:58% auto;background-position:right center;opacity:.24}}
+@media(max-width:767px){.about-hero{min-height:430px}.about-hero-background{background-position:65% center;opacity:.14}.about-hero-content{padding-top:45px;padding-bottom:45px}}
+
+/* APERTURE logo beside the wordmark, shared across all pages */
+.aperture-brand{display:inline-flex;align-items:center;gap:13px;white-space:nowrap}
+.aperture-brand-logo{display:block;width:34px;height:34px;object-fit:contain;flex:none}
+@media(max-width:575px){.aperture-brand{gap:9px;font-size:.98rem}.aperture-brand-logo{width:29px;height:29px}}
+
+/* About: edge-to-edge low-opacity photo behind the ENTIRE upper section, not a right-hand box. */
+.about-hero{position:relative;isolation:isolate;overflow:hidden;min-height:520px;background:#000;display:flex;align-items:center}
+.about-hero-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:url('../images/about-street-musician.jpg');background-size:cover;background-position:center 46%;background-repeat:no-repeat;opacity:.20}
+.about-hero-content{position:relative;z-index:1;padding-top:85px;padding-bottom:85px}
+.about-hero p{max-width:650px}
+@media(min-width:992px){.about-hero{min-height:590px}.about-hero-background{background-size:cover;background-position:center 46%;opacity:.20}}
+@media(max-width:767px){.about-hero{min-height:470px}.about-hero-background{background-size:cover;background-position:center;opacity:.15}.about-hero-content{padding-top:75px;padding-bottom:75px}}
+
+
+/* HOME — full-bleed landscape photograph with subtle opacity; clean portrait editorial section. */
+.home-hero{position:relative;isolation:isolate;overflow:hidden;background:#000;min-height:590px;display:flex;align-items:center}
+.home-hero-background{position:absolute;inset:0;z-index:0;background-image:url('../images/home-set.jpg');background-size:cover;background-position:center 48%;opacity:.22;pointer-events:none}
+.home-hero-content{position:relative;z-index:1;padding-top:110px;padding-bottom:110px}
+.home-hero-copy{max-width:650px}
+.home-hero-copy p{max-width:570px;line-height:1.85}
+.home-editorial{background:#000}
+.home-editorial-portrait{margin:0;position:relative;max-width:390px;padding:0 18px 0 0}
+.home-editorial-portrait::after{content:"";position:absolute;top:22px;right:0;bottom:43px;left:18px;border:1px solid #444;z-index:0;pointer-events:none}
+.home-editorial-portrait img{display:block;position:relative;z-index:1;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 40%;filter:grayscale(15%);opacity:.86}
+.home-editorial-portrait figcaption{position:relative;z-index:1;padding-top:17px;font-family:'Montserrat',Arial,sans-serif;font-size:.65rem;letter-spacing:.18em;color:#a6a6a6}
+.home-editorial-portrait figcaption span{padding:0 8px;color:#666}
+.home-editorial-description{max-width:470px;line-height:1.9}
+.home-editorial-link{display:inline-block;margin-top:22px;padding-bottom:8px;border-bottom:1px solid #888;color:#fff;text-decoration:none;font-family:'Montserrat',Arial,sans-serif;font-size:.72rem;letter-spacing:.12em}
+.home-editorial-link:hover{color:#d9d9d9;border-color:#fff}
+.home-editorial-link span{margin-left:15px}
+@media(max-width:767px){.home-hero{min-height:490px}.home-hero-background{opacity:.16;background-position:60% center}.home-hero-content{padding-top:80px;padding-bottom:80px}.home-editorial-portrait{max-width:330px;margin:0 auto}.home-editorial .row{row-gap:35px!important}}
+
+/* Documentary poster: retain the complete vertical artwork in the Stories editorial row. */
+#carinderia img { width: 100%; max-height: 350px; object-fit: contain; object-position: center; background: #171717; }
+
+/* Connect: functional Google Form cards */
+a.action-link{color:inherit;text-decoration:none;cursor:pointer;transition:background-color .2s,border-color .2s;}
+a.action-link:hover,a.action-link:focus-visible{background-color:#222;border-color:#777;color:#fff;}
+a.action-link:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+.form-cta{display:inline-block;margin-top:12px;font-size:.72rem;letter-spacing:.12em;color:#fff;font-weight:600;}
